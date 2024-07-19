@@ -23,6 +23,8 @@ dtype_to_string = {
 }
 # TODO : Implement customizable params
 def search_for_method(method_name: str):
+    if method_name not in string_to_function.keys():
+        return "No method found"
     foo =  string_to_function[method_name]
     params = signature(foo).parameters
     keys = params.keys()

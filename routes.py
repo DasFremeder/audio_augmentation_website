@@ -8,20 +8,12 @@ main = Blueprint("main", __name__, url_prefix="/")
 @main.get("/")
 def get_index():
     return render_template(
-        "query_form.html",
-        types=current_app.types,
-        generations=current_app.generations,
+        "index.html"
     )
 
-@main.get("/function/<str:function_name>")
+@main.get("/function/<string:function_name>")
 def parameter_api(function_name: str):
-    return search_for_method(function_name)
+    print(function_name)
+    _, plist = search_for_method(function_name)
+    return plist
 
-
-@main.route("/<int:pokemon_id>")
-def pok_by_id(pokemon_id: int):
-    try:
-        data = [m for m in current_app.data if int(m["ID"]) == pokemon_id][0]
-    except IndexError:
-        abort(404)
-    return render_template("details.html", data=data)

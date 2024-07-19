@@ -7,101 +7,115 @@
   <link rel="icon" href="icon.ico">
 </head>
 
-<body class="bg-slate-800">
-  <span class="absolute text-white text-3xl top-5 left-3 cursor-pointer" onclick="openSidebar()">
-    <i class="bi bi-filter-left px-2 bg-gray-400 rounded-md"></i>
-  </span>
-  <div class="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[200px] overflow-y-auto text-center bg-gray-900">
-    <div class="text-gray-100 text-xl">
-      <div class="p-2.5 mt-1 flex items-center">
-        <div class="flex-shrink-0">
-          <img class="h-12 w-12" src="icon.ico" alt="Logo" />
+<div style="width: 100%;">
+
+  <div style="float:left; width: 20%">
+
+    <body class="bg-slate-800">
+      <span class="absolute text-slate-200 text-4xl top-5 left-4 cursor-pointer" onclick="openSidebar()">
+        <i class="bi bi-filter-left px-2 bg-gray-400 rounded-md"></i>
+      </span>
+      <div class="sidebar absolute shrink top-0 bottom-0 lg:left-0 p-2 text-center bg-gray-900">
+        <div class="text-gray-100 text-xl">
+          <div class="p-2.5 mt-1 flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-12 w-12" src="icon.ico" alt="Logo" />
+            </div>
+            <h1 class="font-bold text-gray-200 text-[15px] ml-3">LightningStrike3045</h1>
+            <i class="bi bi-x cursor-pointer ml-28 lg:hidden" onclick="openSidebar()"></i>
+          </div>
+          <div class="my-2 bg-gray-600 h-[1px]"></div>
         </div>
-        <h1 class="font-bold text-gray-200 text-[15px] ml-3">LightningStrike3045</h1>
-        <i class="bi bi-x cursor-pointer ml-28 lg:hidden" onclick="openSidebar()"></i>
+        <div class="p-2.5 flex items-center rounded-md px-4 cursor-pointer bg-gray-700 text-white">
+          <i class="bi bi-search text-sm"></i>
+          <input type="text" placeholder="Search" class="text-[15px] ml-4 w-full bg-transparent focus:outline-none" />
+        </div>
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-blue-600 text-white">
+          <i class="bi bi-house-door-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Home</span>
+        </div>
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-blue-600 text-white">
+          <i class="bi bi-bookmark-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Your Projects</span>
+        </div>
+        <div class="my-4 bg-gray-600 h-[1px]"></div>
+
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-blue-600 text-white">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Login</span>
+        </div>
       </div>
-      <div class="my-2 bg-gray-600 h-[1px]"></div>
-    </div>
-    <div class="p-2.5 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 text-white">
-      <i class="bi bi-search text-sm"></i>
-      <input type="text" placeholder="Search" class="text-[15px] ml-4 w-full bg-transparent focus:outline-none" />
-    </div>
-    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
-      <i class="bi bi-house-door-fill"></i>
-      <span class="text-[15px] ml-4 text-gray-200 font-bold">Home</span>
-    </div>
-    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
-      <i class="bi bi-bookmark-fill"></i>
-      <span class="text-[15px] ml-4 text-gray-200 font-bold">Your Projects</span>
-    </div>
-    <div class="my-4 bg-gray-600 h-[1px]"></div>
-    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
-      onclick="dropdown()">
-      <i class="bi bi-chat-left-text-fill"></i>
-      <div class="flex justify-between w-full items-center">
-        <span class="text-[15px] ml-4 text-gray-200 font-bold">Comments</span>
-        <span class="text-sm rotate-180" id="arrow">
-          <i class="bi bi-chevron-down"></i>
-        </span>
-      </div>
-    </div>
-    <div class="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold" id="submenu">
-      <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
-        Social
-      </h1>
-      <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
-        Personal
-      </h1>
-      <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
-        Friends
-      </h1>
-    </div>
-    <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
-      <i class="bi bi-box-arrow-in-right"></i>
-      <span class="text-[15px] ml-4 text-gray-200 font-bold">Login</span>
-    </div>
+
+      <script type="text/javascript">
+        function dropdown() {
+          document.querySelector("#submenu").classList.toggle("hidden");
+          document.querySelector("#arrow").classList.toggle("rotate-0");
+        }
+        dropdown();
+
+        function openSidebar() {
+          document.querySelector(".sidebar").classList.toggle("hidden");
+        }
+      </script>
+      <script>
+        function openSidebar() {
+          document.querySelector('.sidebar').classList.toggle('hidden');
+        }
+
+        function shrinkSidebar() {
+          document.querySelector('.sidebar').classList.toggle('shrink');
+        }
+      </script>
+
+    </body>
   </div>
+  <div style="float:right; width: 84%">
 
-  <script type="text/javascript">
-    function dropdown() {
-      document.querySelector("#submenu").classList.toggle("hidden");
-      document.querySelector("#arrow").classList.toggle("rotate-0");
-    }
-    dropdown();
+    <body>
+      <div class=" container">
 
-    function openSidebar() {
-      document.querySelector(".sidebar").classList.toggle("hidden");
-    }
-  </script>
-
-
-
-  <div class="p-4 sm:ml-64">
-
-    <body class=" bg-slate-900">
-      <div class="decoration-solid flex p-6 space-x-10">
-        <div class="ml-10 mr-10 font-bold font-serif">
-          <h4 class="text-white text-left text-4xl leading-widest">
-            Audio augmentation
-          </h4>
-          <p class="text-left text-white leading-widest font-light font-serif">
-            Upload your mp3 files here, make sure to compress into zip before upload.
-          </p>
-          <!-- <p>
+        <body class="bg-slate-700">
+          <div class="decoration-solid flex p-6">
+            <div class="mr-10 font-bold font-serif">
+              <h4 class="text-white text-left text-4xl">
+                Audio Augmentation
+              </h4>
+              <p class="text-left text-white leading-widest font-light font-serif">
+                Upload your mp3 files here, make sure to compress into zip before upload.
+              </p>
+              <!-- <p>
                         Audio Augenmentation
                     </p> -->
-        </div>
+            </div>
+        </body>
       </div>
     </body>
-    <form class="flex place-items-center place-content-center space-x-10 my-10">
-      <label class="block">
-        <span class="sr-only">Choose File to upload</span>
-        <input type="file"
-          class="block w-full text-sm text-slate-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-slate-100" />
-      </label>
-    </form>
+    <div style="text-align: center; align-items: center">
+
+      <body class="place-content-center">
+        <a href="#" <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">File Input
+          </h5>
+        </a>
+        <p class="m-3 font-normal text-gray-700 dark:text-gray-400">
+          Upload your compressed audio file here
+        </p>
+        <div class="place-content-center place-items-center">
+          <a href="#" <form class=" font-bold tracking-tight flex my-5 mx-10 place-content-center">
+            <label class="block box-content h-20 w-40 place-content-center place-items-center">
+              <span class="sr-only">Choose File</span>
+              <input type="file"
+                class="block w-full text-sm text-slate-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 hover:file:bg-slate-100" />
+            </label>
+            </form>
+          </a>
+        </div>
+
+      </body>
+    </div>
   </div>
-</body>
+
+</div>
+</div>
 
 
 </html>

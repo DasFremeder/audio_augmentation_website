@@ -32,14 +32,14 @@
     </div>
     <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
       <i class="bi bi-bookmark-fill"></i>
-      <span class="text-[15px] ml-4 text-gray-200 font-bold">Bookmark</span>
+      <span class="text-[15px] ml-4 text-gray-200 font-bold">Your Projects</span>
     </div>
     <div class="my-4 bg-gray-600 h-[1px]"></div>
     <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
       onclick="dropdown()">
       <i class="bi bi-chat-left-text-fill"></i>
       <div class="flex justify-between w-full items-center">
-        <span class="text-[15px] ml-4 text-gray-200 font-bold">Chatbox</span>
+        <span class="text-[15px] ml-4 text-gray-200 font-bold">Comments</span>
         <span class="text-sm rotate-180" id="arrow">
           <i class="bi bi-chevron-down"></i>
         </span>
@@ -58,7 +58,7 @@
     </div>
     <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
       <i class="bi bi-box-arrow-in-right"></i>
-      <span class="text-[15px] ml-4 text-gray-200 font-bold">Logout</span>
+      <span class="text-[15px] ml-4 text-gray-200 font-bold">Login</span>
     </div>
   </div>
 
@@ -78,14 +78,17 @@
 
   <div class="p-4 sm:ml-64">
 
-    <body class="space-y-1 bg-slate-900">
-      <div class="decoration-solid flex p-16">
+    <body class=" bg-slate-900">
+      <div class="decoration-solid flex p-6 space-x-10">
         <div class="ml-10 mr-10 font-bold font-serif">
-          <h4 class="text-white text-left text-3xl  leading-widest">
+          <h4 class="text-white text-left text-4xl leading-widest">
             Audio Augenmentation
           </h4>
-          <p class="text-left text-white leading-widest font-light space-y-6">
+          <p class="text-left text-white leading-widest font-light font-serif">
             Upload your mp3 files here, make sure to compress into zip before upload.
+          </p>
+          <p>
+            Audio Augenmentation
           </p>
         </div>
       </div>
@@ -93,26 +96,12 @@
 </body>
 <form class="flex place-items-center place-content-center space-x-10 my-10">
   <label class="block">
-    <span class="sr-only">Choose File to uploado</span>
-    <input type="file" class="block w-full text-sm text-slate-200
-                        file:mr-4 file:py-2 file:px-4
-                        file:rounded-full file:border-0
-                        file:text-sm file:font-semibold
-                        file:bg-violet-50 file:text-violet-700
-                        hover:file:bg-slate-100
-                    " />
+    <span class="sr-only">Choose File to upload</span>
+    <input type="file"
+      class="block w-full text-sm text-slate-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-slate-100" />
   </label>
 </form>
 </div>
 </body>
-
-<!-- <body class="place-content-center space-y-10">
-        <ul class="list-disc text-center text-slate-200">
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-        </ul>
-    </body> -->
-
 
 </html>

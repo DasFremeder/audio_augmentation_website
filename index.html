@@ -8,10 +8,10 @@
 </head>
 
 <body class="bg-slate-800">
-  <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer" onclick="openSidebar()">
+  <span class="absolute text-white text-3xl top-5 left-3 cursor-pointer" onclick="openSidebar()">
     <i class="bi bi-filter-left px-2 bg-gray-400 rounded-md"></i>
   </span>
-  <div class="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900">
+  <div class="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[200px] overflow-y-auto text-center bg-gray-900">
     <div class="text-gray-100 text-xl">
       <div class="p-2.5 mt-1 flex items-center">
         <div class="flex-shrink-0">
@@ -82,26 +82,26 @@
       <div class="decoration-solid flex p-6 space-x-10">
         <div class="ml-10 mr-10 font-bold font-serif">
           <h4 class="text-white text-left text-4xl leading-widest">
-            Audio Augenmentation
+            Audio augmentation
           </h4>
           <p class="text-left text-white leading-widest font-light font-serif">
             Upload your mp3 files here, make sure to compress into zip before upload.
           </p>
-          <p>
-            Audio Augenmentation
-          </p>
+          <!-- <p>
+                        Audio Augenmentation
+                    </p> -->
         </div>
       </div>
     </body>
+    <form class="flex place-items-center place-content-center space-x-10 my-10">
+      <label class="block">
+        <span class="sr-only">Choose File to upload</span>
+        <input type="file"
+          class="block w-full text-sm text-slate-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-slate-100" />
+      </label>
+    </form>
+  </div>
 </body>
-<form class="flex place-items-center place-content-center space-x-10 my-10">
-  <label class="block">
-    <span class="sr-only">Choose File to upload</span>
-    <input type="file"
-      class="block w-full text-sm text-slate-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-slate-100" />
-  </label>
-</form>
-</div>
-</body>
+
 
 </html>

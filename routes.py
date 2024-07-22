@@ -11,6 +11,23 @@ def get_index():
         "index.html"
     )
 
+@main.get("/login")
+def get_index():
+    return render_template(
+        "login.html"
+    )
+@main.get("/loading")
+def get_index():
+    return render_template(
+        "loading.html"
+    )
+@main.get("/done")
+def get_index():
+    return render_template(
+        "finished.html"
+    )
+
+
 @main.get("/function/<string:function_name>")
 def parameter_api(function_name: str):
     print(function_name)

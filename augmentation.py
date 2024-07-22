@@ -99,5 +99,3 @@ def bulk_process(input_folder, method_list, target_folder,param_list = [], amoun
             samples, rate = process(input_folder + f, s,specific_param_list)
             sf.write(f"{target_folder}/processed_{c}_{f}",samples.T,rate)
             c = c + 1
-print(os.getcwd())
-bulk_process("audio_augmentation_website/uploaded_files/user_name/",list(string_to_function.keys()), "audio_augmentation_website/output",[],50)

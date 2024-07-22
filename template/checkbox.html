@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<head class="text-center bg-grey">
+    <title>Lighting Strike3045</title>
+    <link rel="icon" href="icon.ico">
+</head>
+<div style="width: 100%;">
+
+    <div style="float:left; width: 20%">
+
+        <body class="bg-gradient-to-r from-slate-900 to-red-800">
+            <span class="absolute text-slate-200 text-4xl top-5 left-4 cursor-pointer" onclick="openSidebar()">
+                <i class="bi bi-filter-left px-2 bg-slate-900 rounded-md"></i>
+            </span>
+            <div class="sidebar absolute top-0 bottom-0 lg:left-0 text-center bg-slate-750 border-slate-500 border-r-2"
+                style="width: 20%">
+                <div class="text-gray-100 text-xl">
+                    <div class="p-2.5 mt-1 flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12" src="icon.ico" alt="Logo" />
+                        </div>
+                        <h1 class="font-bold text-gray-200 text-[15px] ml-3">Lightning Strike</h1>
+                        <i class="bi bi-x cursor-pointer ml-28 lg:hidden" onclick="openSidebar()"></i>
+                    </div>
+                    <div class="my-2 bg-gray-600 h-[1px]"></div>
+                </div>
+                <div class="p-2.5 flex items-center rounded-md px-4 cursor-pointer bg-gray-700 text-white">
+                    <i class="bi bi-search text-sm"></i>
+                    <input type="text" placeholder="Search"
+                        class="text-[15px] ml-4 w-full bg-transparent focus:outline-none" />
+                </div>
+                <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-blue-600 text-white">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span class="text-[15px] ml-4 text-gray-200 font-bold">Home</span>
+                </div>
+                <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-blue-600 text-white">
+                    <i class="bi bi-bookmark-fill"></i>
+                    <span class="text-[15px] ml-4 text-gray-200 font-bold">Your Projects</span>
+                </div>
+                <div class="my-4 bg-gray-600 h-[1px]"></div>
+
+                <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-blue-600 text-white">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    <span class="text-[15px] ml-4 text-gray-200 font-bold">Login</span>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                function dropdown() {
+                    document.querySelector("#submenu").classList.toggle("hidden");
+                    document.querySelector("#arrow").classList.toggle("rotate-0");
+                }
+                dropdown();
+
+                function openSidebar() {
+                    document.querySelector(".sidebar").classList.toggle("hidden");
+                }
+            </script>
+            <script>
+                function openSidebar() {
+                    document.querySelector('.sidebar').classList.toggle('hidden');
+                }
+
+                function shrinkSidebar() {
+                    document.querySelector('.sidebar').classList.toggle('shrink');
+                }
+            </script>
+
+        </body>
+    </div>
+
+</html>

@@ -16,9 +16,13 @@ def get_augmentation_methods():
     if request.method == "POST":
         f = request.files["file"] 
         f.save(f"audio_augmentation_website/output/{f.filename}")   
-        return render_template("outputSelect.html")
-    
+        return render_template("checkbox.html")
 
+@main.post("/process")
+def process():
+    if request.method == "POST":
+        print(request.form)
+        return render_template("loading.html")
 
 # @main.get("/login")
 # def get_index():

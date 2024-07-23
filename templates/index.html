@@ -99,11 +99,12 @@
           Upload your compressed audio file here
         </p>
         <div class="place-content-center place-items-center">
-          <a href="#" <form class="tracking-tight flex my-5 mx-10 place-content-center hover:text-sky-200">
+          <a href="#"> <form class="tracking-tight flex my-5 mx-10 place-content-center hover:text-sky-200" action="/checkbox" method="POST" enctype="multipart/form-data">
             <label class="block box-content h-20 w-40 place-content-center place-items-center">
               <span class="sr-only">Choose File</span>
               <input type="file"
-                class="block w-full text-sm text-slate-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 hover:file:bg-slate-100" />
+                class="block w-full text-sm text-slate-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 hover:file:bg-slate-100" name="file"/>
+              <input type="submit">
             </label>
             </form>
           </a>

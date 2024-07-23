@@ -11,21 +11,30 @@ def get_index():
         "index.html"
     )
 
-@main.get("/login")
-def get_index():
-    return render_template(
-        "login.html"
-    )
-@main.get("/loading")
-def get_index():
-    return render_template(
-        "loading.html"
-    )
-@main.get("/done")
-def get_index():
-    return render_template(
-        "finished.html"
-    )
+@main.post("/checkbox")
+def get_augmentation_methods():
+    if request.method == "POST":
+        f = request.files["file"] 
+        f.save(f"audio_augmentation_website/output/{f.filename}")   
+        return render_template("outputSelect.html")
+    
+
+
+# @main.get("/login")
+# def get_index():
+#     return render_template(
+#         "login.html"
+#     )
+# @main.get("/loading")
+# def get_index():
+#     return render_template(
+#         "loading.html"
+#     )
+# @main.get("/done")
+# def get_index():
+#     return render_template(
+#         "finished.html"
+#     )
 
 
 @main.get("/function/<string:function_name>")

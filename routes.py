@@ -11,6 +11,16 @@ def get_index():
         "index.html"
     )
 
+@main.post("/upload")
+def file_return():
+    print("Posted")
+    if request.method == "POST":
+        print(request.files)
+        f = request.files['file']
+        f.save(f"audio_augmentation_website/uploaded_files/{f.filename}")
+        return render_template("checkbox.html")
+
+
 @main.get("/function/<string:function_name>")
 def parameter_api(function_name: str):
     print(function_name)

@@ -2,6 +2,8 @@ import audiomentations
 import soundfile as sf
 import numpy as np
 import os
+import itertools
+import random
 from inspect import signature
 # Map string to function
 string_to_function = {
@@ -75,8 +77,25 @@ def process(audio_file, method_list, param_list = []):
     return processed, rate
 # Convert entire folders 
 
-def bulk_process(input_folder, method_list, target_folder):
+def bulk_process(input_folder, method_list, target_folder,param_list = [], amount = 1):
     files = os.listdir(input_folder)
+    param_dict = {}
+    for i in range(len(method_list)):
+        if param_list:
+            param_dict[method_list[i]] = param_list[i]
+        else:
+            param_dict[method_list[i]] = []
+    combinations = []
+    for i in range(1,len(method_list)+1):
+        combinations += itertools.combinations(method_list,i)
+    selected = random.sample(combinations,amount)
+    c = 0
     for f in files:
-        samples, rate = process(input_folder + f, method_list)
-        sf.write(f"{target_folder}/processed_{f}",samples.T,rate)
+        for s in selected:
+            specific_param_list = []
+            for method in s:
+                specific_param_list.append(param_dict[method])
+
+            samples, rate = process(input_folder + f, s,specific_param_list)
+            sf.write(f"{target_folder}/processed_{c}_{f}",samples.T,rate)
+            c = c + 1

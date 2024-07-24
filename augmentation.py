@@ -4,6 +4,9 @@ import numpy as np
 import os
 import itertools
 import random
+from zipfile import ZipFile
+
+
 from inspect import signature
 # Map string to function
 string_to_function = {
@@ -23,7 +26,8 @@ dtype_to_string = {
     bool : "bool",
 }
 # TODO : Implement customizable params
-def search_for_method(method_name: str):
+def search_for_method(m: str):
+    method_name = m.lower()
     if method_name not in string_to_function.keys():
         return None, "No method found"
     foo =  string_to_function[method_name]
@@ -55,6 +59,7 @@ def file_to_samples(audio_file_path):
 def build_augmentation(method_list, use_param_list = False,param_list = []):
     methods = []
     for i in range(len(method_list)):
+        print(method_list[i])
         foo, _ = search_for_method(method_list[i])
         sig = signature(foo)
         if use_param_list:
@@ -91,6 +96,8 @@ def bulk_process(input_folder, method_list, target_folder,param_list = [], amoun
     selected = random.sample(combinations,amount)
     c = 0
     for f in files:
+        if not f.endswith(".wav"):
+            continue
         for s in selected:
             specific_param_list = []
             for method in s:
@@ -100,4 +107,3 @@ def bulk_process(input_folder, method_list, target_folder,param_list = [], amoun
             sf.write(f"{target_folder}/processed_{c}_{f}",samples.T,rate)
             c = c + 1
 
-bulk_process("/Users/cslab/Documents/GitHub/audio_augmentation_website/uploaded_files/user_name/", ['pitch shift', 'air absorption'],'/Users/cslab/Documents/GitHub/audio_augmentation_website/output/',[],2)

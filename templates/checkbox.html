@@ -79,45 +79,45 @@
             Choose types of variations to augment the audio on
         </div>
         <div class="flex items-start gap-2.5 place-content-center m-20">
-            <form type="post">
+            <form action="/process" method="post">
                 <div class="flex items-center m-5">
-                    <input checked id="checked-checkbox" type="checkbox" value=""
+                    <input checked id="checked-checkbox" type="checkbox" value="Selected" name="Time Stretch"
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                         Time stretch</label>
                 </div>
                 <div class="flex items-center m-5">
-                    <input checked id="checked-checkbox" type="checkbox" value=""
+                    <input checked id="checked-checkbox" type="checkbox" value="Selected" name="Pitch Shift"
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                         Pitch shift</label>
                 </div>
                 <div class="flex items-center m-5">
-                    <input checked id="checked-checkbox" type="checkbox" value=""
+                    <input checked id="checked-checkbox" type="checkbox" value="Selected" name="Air Absorption"
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                         Air absorption</label>
                 </div>
                 <div class="flex items-center m-5">
-                    <input checked id="checked-checkbox" type="checkbox" value=""
+                    <input checked id="checked-checkbox" type="checkbox" value="Selected" name="Aliasing"
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                         Aliasing</label>
                 </div>
                 <div class="flex items-center m-5">
-                    <input checked id="checked-checkbox" type="checkbox" value=""
+                    <input checked id="checked-checkbox" type="checkbox" value="Selected" name="Band Pass Filer"
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                         Band pass filter</label>
                 </div>
                 <div class="flex items-center m-5">
-                    <input checked id="checked-checkbox" type="checkbox" value=""
+                    <input checked id="checked-checkbox" type="checkbox" value="Selected" name="Band Stop Filter"
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                         Band stop filter</label>
                 </div>
                 <div class="flex items-center m-5">
-                    <input checked id="checked-checkbox" type="checkbox" value=""
+                    <input checked id="checked-checkbox" type="checkbox" value="Selected" name="Reverse"
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                         Reverse</label>
@@ -130,7 +130,7 @@
         <div class="flex items-start gap-2.5 place-content-center m-20">
             <label for="number-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a
                 number:</label>
-            <input type="number" id="number-input" aria-describedby="helper-text-explanation" min="0" max="128"
+            <input type="number" id="number-input" aria-describedby="helper-text-explanation" min="0" max="128" name="amount"
                 class="px-20 bg-gray-50 max-w-bg border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required />
         </div>
